@@ -5,12 +5,12 @@
 var List = React.createBackboneClass({
 
     makeItem: function(item, index) {
-        return React.createElement("li", {key: index}, item.get("name"))
+        return <li key={index}>{item.get("name")}</li>
 
     },
 
     render: function() {
-        return React.createElement("ul", null, this.props.collection.map(this.makeItem));
+        return <ul>{this.props.collection.map(this.makeItem)}</ul>;
     }
 
 });
