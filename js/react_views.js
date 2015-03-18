@@ -1,11 +1,14 @@
-
-
 (function(views){
 
 var List = React.createBackboneClass({
 
     makeItem: function(item, index) {
-        return React.createElement("li", {key: index}, item.get("name"))
+        var newProgress = item.get("progress") * 100;
+
+        return React.createElement("li", {key: index}, 
+                    React.createElement("span", null, item.get("name")), 
+                    React.createElement("input", {type: "range", value: newProgress, min: "0", max: "100"})
+                )   
 
     },
 

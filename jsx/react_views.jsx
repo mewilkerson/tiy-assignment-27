@@ -3,7 +3,12 @@
 var List = React.createBackboneClass({
 
     makeItem: function(item, index) {
-        return <li key={index}>{item.get("name")}</li>
+        var newProgress = item.get("progress") * 100;
+
+        return <li key={index}>
+                    <span>{item.get("name")}</span>
+                    <input type="range" value={newProgress} min="0" max="100" />
+                </li>   
 
     },
 
