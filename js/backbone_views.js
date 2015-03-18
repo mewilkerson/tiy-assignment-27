@@ -7,6 +7,11 @@
     tagName: "li",
 
     render: function(){
+      var width = this.model.get("progress");
+      width = width * 100;
+      width = Math.round(width);
+      width = width + "%";
+      this.model.set({width: width});
       this.$el.html(this.template(this.model.toJSON()));
       return this;
     }

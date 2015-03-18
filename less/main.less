@@ -13,7 +13,7 @@ body {
     max-width: 600px;  
 }
 
-.react-view li {
+.react-view li, .backbone-view li {
     padding: .5em;
     list-style-type: none;
     span {
@@ -58,4 +58,24 @@ body {
         color: @dark;
     }
 
+}
+
+.backbone-view li {
+    .range {
+        width: 200px;
+        background-color: @tan;
+        display: inline-block;
+        height: 15px;
+    }
+
+    .progress-bar {
+        background: #efe1bf; /* Old browsers */
+        background: linear-gradient(to right,  #efe1bf 0%,#e9bd51 100%); /* W3C */
+        height: 15px;
+        position: relative;
+        &:before {
+            content: attr(data-width);
+            font-size: .9em;
+        }
+    }
 }

@@ -8,7 +8,9 @@ this["JST"]["list_item"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"]
 
   return "\n  <span>"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</span>\n    <span class=\"range\">\n      <input type=\"range\" value=\""
-    + alias3(((helper = (helper = helpers.progress || (depth0 != null ? depth0.progress : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"progress","hash":{},"data":data}) : helper)))
-    + "\">\n    </span>\n";
+    + "</span>\n    <span class=\"range\">\n      <div class=\"progress-bar\" data-width=\""
+    + alias3(((helper = (helper = helpers.width || (depth0 != null ? depth0.width : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"width","hash":{},"data":data}) : helper)))
+    + "\" style=\"width:"
+    + alias3(((helper = (helper = helpers.width || (depth0 != null ? depth0.width : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"width","hash":{},"data":data}) : helper)))
+    + ";\"></div>\n    </span>\n";
 },"useData":true});
