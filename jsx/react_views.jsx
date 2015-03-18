@@ -1,5 +1,3 @@
-
-
 (function(views){
 
 var List = React.createBackboneClass({
