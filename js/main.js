@@ -7,8 +7,7 @@ $(function(){
 
     var elem = React.createElement(bugs.views.List, {collection: bugCollection});
 
-    React.render(elem, document.body);
-
+    React.render(elem, document.querySelector(".react-view"));
 
   });
 
