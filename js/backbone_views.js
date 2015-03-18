@@ -4,6 +4,8 @@
 
     template: JST["list_item"],
 
+    tagName: "li",
+
     render: function(){
       this.$el.html(this.template(this.model.toJSON()));
       return this;
@@ -19,7 +21,7 @@
       this.$el.html(this.template());
       this.collection.each(function(model){
         var item = new Item({model: model});
-        this.$("ul").append(item.render().el);
+        this.$(".backbone-view ul").append(item.render().el);
       });
       return this;
     }

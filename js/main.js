@@ -9,6 +9,14 @@ $(function(){
 
     React.render(elem, document.querySelector(".react-view"));
 
+    var backboneView = new bugs.backboneViews.List({
+      collection: bugCollection,
+      el: $(".backbone-view")
+
+    });
+
+    backboneView.render();
+
   });
 
 
