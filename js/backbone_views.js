@@ -1,6 +1,6 @@
 (function(views){
 
-  var ListItem = Backbone.View.extend({
+  var Item = Backbone.View.extend({
 
     template: JST["list_item"],
 
@@ -11,4 +11,19 @@
 
   });
 
+  var List = Backbone.View.extend({
+
+    template: JST["list"],
+
+    render: function(){
+      this.$el.html(this.template());
+      this.collection.each(function(model){
+        var item = new Item({model: model});
+        this.$("ul").append(item.render().el);
+      });
+      return this;
+    }
+
+  })
+views.List = List;
 })(bugs.backboneViews = {});
