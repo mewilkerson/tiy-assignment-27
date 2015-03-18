@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.react-view,
+.backbone-view {
+  max-width: 600px;
+}
+.react-view li {
+  padding: .5em;
+  list-style-type: none;
+}
+.react-view li span {
+  display: inline-block;
+  line-height: 1;
+}
+.react-view li .range {
+  float: right;
+}
+.react-view li .range input {
+  -webkit-appearance: none;
+}
+.react-view li .range input::-webkit-slider-runnable-track {
+  height: 5px;
+  background-color: #e5ddca;
+  border: none;
+}
+.react-view li .range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: #e9bd51;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+.react-view li .range span {
+  width: 40px;
+  text-align: right;
+}
+.react-view li:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.react-view li:nth-child(odd) {
+  background-color: #a3cac8;
+  color: #544944;
+}
+.react-view li:nth-child(even) {
+  background-color: #c3dddb;
+  color: #544944;
+}

@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@dark: #544944;
+@tan: #E5DDCA;
+@yellow: #E9BD51;
+@green: #A3CAC8;
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.react-view, .backbone-view {
+    max-width: 600px;  
+}
+
+.react-view li {
+    padding: .5em;
+    list-style-type: none;
+    span {
+        display: inline-block;
+        line-height: 1;
+    }
+    .range {
+        float: right;
+        input {
+            -webkit-appearance: none;
+            &::-webkit-slider-runnable-track {
+                height: 5px;
+                background-color: @tan;
+                border: none;
+            }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 15px;
+                width: 15px;
+                background-color: @yellow;
+                border-radius: 50%;
+                margin-top: -5px;
+            }
+        }
+
+        span {
+            width: 40px;
+            text-align: right;
+        }
+    }
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    &:nth-child(odd) {
+        background-color: @green;
+        color: @dark;
+    }
+    &:nth-child(even) {
+        background-color: lighten(@green, 10%);
+        color: @dark;
+    }
+
+}
